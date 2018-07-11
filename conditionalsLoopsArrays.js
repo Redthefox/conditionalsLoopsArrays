@@ -6,42 +6,49 @@ console.log("Challenge #1:");
 // Create an array called "roster" with the following names as 
 // strings: Pikachu, MewTwo, Onix, Eevee
 // Console.log the length of the "roster" array
-
+let roster = ["Pikachu","MewTwo","Onix","Eevee"];
+console.log(roster.length);
 // ==================================================================
 console.log("Challenge #2:");
 // push the user's first command line argument to the end of the 
 // "roster" array (ideally, it's a pokemon's name!)
 // console.log the "roster" array
-
+roster.push(process.argv[2]);
+console.log(roster);
 // ==================================================================
 console.log("Challenge #3:");
 // remove the item from the "roster" array that corresponds to 
 // the user's second command line argument
 // NOTE: consider what data type command line arguments come in as
 // console.log the "roster" array
-
+roster.push(process.argv[3]);
+roster.pop(process.argv[3]);
+console.log(roster);
 //////////////////
 // CONDITIONALS //
 //////////////////
 console.log("Challenge #4:");
 // Create a variable called "catchChance" and set it equal to .25
 // Note: this corresponds to a 25% chance to catch a pokemon!
-
+let catchChance = .25;
 // Create a variable called "catchAttempt" and set it equal to 
 // Math.random()
-
+let catchAttempt = Math.random();
 // Note: we'll learn more about Math.random() later, but for now
 // just think of it as equal to a random decimal between 0 and 1
 
 // If "catchAttempt" is less than "catchChance" console.log "Caught it!"
 // Otherwise, console.log "Aargh! Almost had it!"
-
+if(catchAttempt < catchChance){
+    console.log("Caught it!")
+} else (console.log("Aragh! Almost had it!"));
 // ==================================================================
 console.log("Challenge #5:");
 // If the number of pokemon in the "roster" array is less than 6
 // Add an empty string to the "roster" array (signifying an empty
 // spot)
-
+if(roster.length<6){roster[5]=""};
+console.log(roster);
 // Console.log the "roster" array
 
 // ==================================================================
