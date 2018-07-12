@@ -22,6 +22,7 @@ console.log("Challenge #3:");
 // NOTE: consider what data type command line arguments come in as
 // console.log the "roster" array
 roster.push(process.argv[3]);
+console.log(roster);
 roster.pop(process.argv[3]);
 console.log(roster);
 //////////////////
@@ -57,7 +58,9 @@ const elements = ["plant","fire","water"];
 const enemyAttackType = elements[Math.floor(Math.random()*elements.length)];
 // You've been provided a variable called "enemyAttackType" that is a 
 // random string that can be "plant","fire",or "water".
-
+if(enemyAttackType=="plant"){ console.log("Its super effective!");
+}else if (enemyAttackType=="fire"){console.log("Its not very effective!");}
+else if(enemyAttackType=="water"){console.log("Nothing special happened!")} else(console.log("Error, this isn't supposed to be seen"));
 // (assuming you have a "water" pokemon...)
 
 // If the "enemyAttackType" is "plant", console.log "It's super effective!"
